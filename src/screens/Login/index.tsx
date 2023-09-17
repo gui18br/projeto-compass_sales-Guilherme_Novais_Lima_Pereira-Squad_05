@@ -1,5 +1,10 @@
 import React, { useContext, useState } from 'react';
-import { View, Text, StyleSheet, ActivityIndicator, TouchableOpacity } from 'react-native';
+import { View, 
+    Text, 
+    StyleSheet, 
+    ActivityIndicator, 
+    TouchableOpacity } 
+    from 'react-native';
 import { FIREBASE_AUTH } from '../../../FirebaseConfig';
 import { useNavigation } from '@react-navigation/native';
 import { signInWithEmailAndPassword } from 'firebase/auth';

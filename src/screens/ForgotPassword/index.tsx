@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, ActivityIndicator } from 'react-native';
+import { 
+    View,
+    Text,
+    StyleSheet,
+    ActivityIndicator 
+} from 'react-native';
 import { FIREBASE_AUTH } from '../../../FirebaseConfig';
 import { Button } from '../../components/UI/Button';
 import { CustomTextInput } from '../../components/UI/CustomTextInput';
-import { useForm, Controller } from 'react-hook-form';
+import { useForm, 
+    Controller } 
+    from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup'
 import  * as yup from 'yup'
 import { sendPasswordResetEmail } from 'firebase/auth';

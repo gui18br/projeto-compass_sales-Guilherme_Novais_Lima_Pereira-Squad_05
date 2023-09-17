@@ -1,5 +1,9 @@
 import React, { useContext } from 'react';
-import { View, Text, ImageBackground, StyleSheet } from 'react-native';
+import { View, 
+    Text, 
+    ImageBackground, 
+    StyleSheet } 
+    from 'react-native';
 import { Button } from '../../components/UI/Button';
 import { FIREBASE_AUTH } from '../../../FirebaseConfig';
 

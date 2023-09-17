@@ -1,6 +1,10 @@
 import { AntDesign } from '@expo/vector-icons';
 import React, { useState } from 'react';
-import { View, TextInput, Text, StyleSheet } from 'react-native'
+import { View, 
+    TextInput, 
+    Text, 
+    StyleSheet 
+} from 'react-native'
 
 export function CustomTextInput({style ,label, valueInput, autoCapitalize, secureTextEntry, onChangeText, keyboardType, error }: any) {
     const [text, setText] = useState('');
