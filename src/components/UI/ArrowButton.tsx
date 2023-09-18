@@ -8,7 +8,7 @@ interface ButtonProps extends TouchableOpacityProps {
 
 export function ArrowButton({ style, title, onPress }: ButtonProps) {
   return (
-    <TouchableOpacity style={[styles.simpleButton, style]} onPress={onPress}>
+    <TouchableOpacity style={[styles.arrowButton, style]} onPress={onPress}>
       <Text>
         {title} <AntDesign name="arrowright" size={15} color="red" />
       </Text>
@@ -17,7 +17,7 @@ export function ArrowButton({ style, title, onPress }: ButtonProps) {
 }
 
 const styles = StyleSheet.create({
-  simpleButton: {
+  arrowButton: {
     alignItems: "flex-end",
   },
 });

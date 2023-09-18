@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { ActivityIndicator, TouchableOpacity, View, StyleSheet, Text } from "react-native";
+import { ActivityIndicator, View, StyleSheet, Text } from "react-native";
 import { FIREBASE_AUTH } from "../../../FirebaseConfig";
 import { Button } from "../../components/UI/Button";
 import { useNavigation } from "@react-navigation/native";

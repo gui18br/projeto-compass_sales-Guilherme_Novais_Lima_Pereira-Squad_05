@@ -24,11 +24,12 @@ function InsideLayout() {
         name="Home"
         component={Home}
         options={{
-          tabBarIcon: ({ focused, color, size }) => {
+          tabBarActiveTintColor: "red",
+          tabBarIcon: ({ focused, size }) => {
             if (focused) {
-              return <Ionicons name="home" size={size} color={color} />;
+              return <Ionicons name="home" size={size} color={"red"} />;
             }
-            return <Ionicons name="home-outline" size={size} color={color} />;
+            return <Ionicons name="home-outline" size={size} />;
           },
         }}
       />
