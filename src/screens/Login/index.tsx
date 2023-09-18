@@ -10,6 +10,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import AntDesign from "@expo/vector-icons/build/AntDesign";
 import { AuthContext } from "../../contexts/auth";
+import { ArrowButton } from "../../components/UI/ArrowButton";
 
 const schema = yup.object({
   email: yup
@@ -89,15 +90,12 @@ export function Login() {
           <ActivityIndicator size={"large"} color={"#db3022"} />
         ) : (
           <>
-            <TouchableOpacity
-              style={styles.buttonForgot}
-              // @ts-ignore
+            <ArrowButton
+              title={"Forgot your password?"}
+              //@ts-ignore
               onPress={() => navigation.navigate("ForgotPassword")}
-            >
-              <Text>
-                Forgot your password? <AntDesign name="arrowright" size={15} color="red" />
-              </Text>
-            </TouchableOpacity>
+            />
+
             <Button
               title="LOGIN"
               onPress={() => {
@@ -145,9 +143,6 @@ const styles = StyleSheet.create({
     marginBottom: 8,
     color: "red",
     fontSize: 12,
-  },
-  buttonForgot: {
-    alignItems: "flex-end",
   },
   text: {
     color: "black",

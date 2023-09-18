@@ -8,7 +8,7 @@ import { CustomTextInput } from "../../components/UI/CustomTextInput";
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import AntDesign from "@expo/vector-icons/build/AntDesign";
+import { ArrowButton } from "../../components/UI/ArrowButton";
 import { AuthContext } from "../../contexts/auth";
 
 const schema = yup.object({
@@ -102,15 +102,11 @@ export function Signup() {
           <ActivityIndicator size={"large"} color={"#db3022"} />
         ) : (
           <>
-            <TouchableOpacity
-              style={styles.buttonForgot}
-              // @ts-ignore
+            <ArrowButton
+              title={"Already have an account?"}
+              //@ts-ignore
               onPress={() => navigation.navigate("Login")}
-            >
-              <Text>
-                Already have an account? <AntDesign name="arrowright" size={15} color="red" />
-              </Text>
-            </TouchableOpacity>
+            />
 
             <Button
               title="SIGN UP"
@@ -155,9 +151,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginBottom: 8,
     color: "red",
-  },
-  buttonForgot: {
-    alignItems: "flex-end",
   },
   text: {
     color: "black",
