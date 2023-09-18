@@ -116,6 +116,8 @@ export function Signup() {
                   // @ts-ignore
                   navigation.navigate("Login");
                 } else {
+                  // @ts-ignore
+                  navigation.navigate("Login");
                   handleSubmit(signUp)();
                 }
               }}

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { View, Text, StyleSheet, ActivityIndicator } from "react-native";
+import { View, Text, StyleSheet, ActivityIndicator, TouchableOpacity } from "react-native";
 import { FIREBASE_AUTH } from "../../../FirebaseConfig";
 import { useNavigation } from "@react-navigation/native";
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -8,8 +8,8 @@ import { CustomTextInput } from "../../components/UI/CustomTextInput";
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import AntDesign from "@expo/vector-icons/build/AntDesign";
 import { AuthContext } from "../../contexts/auth";
-import { ArrowButton } from "../../components/UI/ArrowButton";
 
 const schema = yup.object({
   email: yup
@@ -89,12 +89,15 @@ export function Login() {
           <ActivityIndicator size={"large"} color={"#db3022"} />
         ) : (
           <>
-            <ArrowButton
-              title={"Forgot your password?"}
-              //@ts-ignore
+            <TouchableOpacity
+              style={styles.buttonForgot}
+              // @ts-ignore
               onPress={() => navigation.navigate("ForgotPassword")}
-            />
-
+            >
+              <Text>
+                Forgot your password? <AntDesign name="arrowright" size={15} color="red" />
+              </Text>
+            </TouchableOpacity>
             <Button
               title="LOGIN"
               onPress={() => {
@@ -142,6 +145,9 @@ const styles = StyleSheet.create({
     marginBottom: 8,
     color: "red",
     fontSize: 12,
+  },
+  buttonForgot: {
+    alignItems: "flex-end",
   },
   text: {
     color: "black",
