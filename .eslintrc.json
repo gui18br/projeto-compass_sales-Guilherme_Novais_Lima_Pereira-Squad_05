@@ -1,0 +1,19 @@
+{
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["standard-with-typescript", "plugin:react/recommended", "standard/hooks", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "react-native"],
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+
+    "no-use-before-define": ["error", { "variables": false }],
+
+    "react/prop-types": ["error", { "ignore": ["navigation", "navigation.navigate"] }]
+  }
+}
